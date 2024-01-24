@@ -1,2 +1,2 @@
-# MILO-.AI
+# MILOS-.AI
 it lives

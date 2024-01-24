@@ -1,0 +1,25 @@
+ahoj bote, tady je návod k sestavení obvodu pro arduino:
+Sestavení:
+Připojení LED diod k Arduino:
+
+Zapoj první LED diodu k pinu 9 na Arduino:
+
+Dlouhou nožku LED diody (anodu) připoj k rezistoru a druhý konec rezistoru připoj k pinu 9 na Arduino.
+Krátkou nožku LED diody (katodu) připoj k GND na Arduino.
+Zapoj druhou LED diodu k pinu 10 na Arduino:
+
+Dlouhou nožku LED diody (anodu) připoj k rezistoru a druhý konec rezistoru připoj k pinu 10 na Arduino.
+Krátkou nožku LED diody (katodu) připoj k GND na Arduino.
+Připojení tlačítka:
+
+Připoj tlačítko k pinu 2 na Arduino.
+Připoj jeden konec tlačítka k pinu 2 a druhý konec k GND na Arduino.
+Připojení fotorezistoru:
+
+Připoj jednu nohu fotorezistoru k pinu A0 na Arduino.
+Připoj druhou nohu fotorezistoru k GND na Arduino.
+Připojení rezistorů k LED diodám:
+
+Připoj rezistory (přibližně 220 ohmů) k anodám (dlouhým nožkám) obou LED diod a druhé konce rezistorů připoj ke GND na Arduino.
+
+Potřebuji k tomu napsat kód: pokud se tlačítko zmáčkne, tak LEDka v pinu 10 bude svítit. Pokud se bude svítit baterkou na fotorezistor, tak bude svítit LED v pinu 9.

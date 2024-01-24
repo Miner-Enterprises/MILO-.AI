@@ -1,0 +1,38 @@
+// Definujeme piny pro LED diody a tlačítko
+const int ledPin9 = 9;
+const int ledPin10 = 10;
+const int buttonPin = 2;
+const int photoresistorPin = A0;
+
+// Proměnná pro uchování stavu tlačítka
+int buttonState = 0;
+
+void setup() {
+  // Nastavíme piny jako vstupní nebo výstupní
+  pinMode(ledPin9, OUTPUT);
+  pinMode(ledPin10, OUTPUT);
+  pinMode(buttonPin, INPUT);
+  pinMode(photoresistorPin, INPUT);
+}
+
+void loop() {
+  // Přečteme stav tlačítka
+  buttonState = digitalRead(buttonPin);
+
+  // Pokud je tlačítko stisknuto, rozsvítíme LED na pinu 10
+  if (buttonState == HIGH) {
+    digitalWrite(ledPin10, HIGH);
+  } else {
+    digitalWrite(ledPin10, LOW);
+  }
+
+  // Přečteme hodnotu fotorezistoru
+  int lightValue = analogRead(photoresistorPin);
+
+  // Pokud je hodnota vyšší než určitý práh, rozsvítíme LED na pinu 9
+  if (lightValue > 500) {
+    digitalWrite(ledPin9, HIGH);
+  } else {
+    digitalWrite(ledPin9, LOW);
+  }
+}
